@@ -71,10 +71,10 @@ header {
 }
 .container {
   // 最大最小宽度
-  min-width: 120px;
+  min-width: 1200px;
   max-width: 1980px;
   margin: 0 auto;
-  border: 1px solid red;
+  // border: 1px solid red;
   padding: 0.125rem 0.125rem 0;
   // background-color: #ccc;
   display: flex;
@@ -91,8 +91,9 @@ header {
   margin: 0.25rem;
   h2 {
     font-size: 0.375rem;
+    color: #fff;
+    line-height: 0.6rem;
     text-align: center;
-    line-height: 1rem;
   }
 }
 </style>

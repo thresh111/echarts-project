@@ -13,13 +13,6 @@ export default {
     let $echarts = inject("echarts");
     let $axios = inject("axios");
     let data = reactive({});
-    let xAxisData = reactive([]);
-    let yAxisData = reactive([]);
-
-    function setData() {
-      xAxisData = data.data.chartData.chartsData.map((item) => item.tittle);
-      yAxisData = data.data.chartData.chartsData.map((item) => item.num);
-    }
 
     async function getState() {
       data = await $axios({
@@ -30,7 +23,6 @@ export default {
     onMounted(() => {
       // 调用请求
       getState().then(() => {
-        setData();
         let myChart = $echarts.init(document.getElementById("threeChart"));
 
         myChart.setOption({
@@ -62,9 +54,6 @@ export default {
     return {
       getState,
       data,
-      yAxisData,
-      xAxisData,
-      setData,
     };
   },
 };

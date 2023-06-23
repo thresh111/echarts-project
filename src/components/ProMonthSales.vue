@@ -38,11 +38,21 @@ export default {
               type: "category",
               data: data.data.chartData.chartsData.day,
               boundaryGap: false,
+              axisLine: {
+                lineStyle: {
+                  color: "#fff",
+                },
+              },
             },
           ],
           yAxis: [
             {
               type: "value",
+              axisLine: {
+                lineStyle: {
+                  color: "#fff",
+                },
+              },
             },
           ],
 
