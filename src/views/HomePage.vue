@@ -36,6 +36,8 @@ import ProMonthSales from "@/components/ProMonthSales.vue";
 import InventoryStatistics from "@/components/InventoryStatistics.vue";
 import ProCategory from "@/components/ProCategory.vue";
 
+import { inject } from "vue";
+
 export default {
   components: {
     ItemPage,
@@ -43,6 +45,13 @@ export default {
     ProMonthSales,
     InventoryStatistics,
     ProCategory,
+  },
+  setup() {
+    // 测试使用echarts
+    let $echarts = inject("echarts");
+    let $axios = inject("axios");
+
+    console.log($echarts, $axios);
   },
 };
 </script>

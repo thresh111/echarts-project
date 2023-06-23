@@ -1,6 +1,23 @@
 <template>
   <router-view />
 </template>
+
+<script>
+// 1.引用proivde
+import { provide } from "vue";
+// 2.引用echarts
+import * as echarts from "echarts";
+
+import axios from "axios";
+
+export default {
+  setup() {
+    // provide("名字","传递的内容")
+    provide("echarts", echarts);
+    provide("axios", axios);
+  },
+};
+</script>
 <style lang="less">
 body {
   background: url(../src/assets/bg.jpg) top center no-repeat;
