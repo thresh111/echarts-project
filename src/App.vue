@@ -18,6 +18,11 @@ export default {
     provide("echarts", echarts);
     provide("axios", axios);
   },
+  watch: {
+    "$store.state.windowSize"() {
+      location.reload();
+    },
+  },
 };
 </script>
 <style lang="less">

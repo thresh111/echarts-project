@@ -33,6 +33,7 @@ export default {
       getState().then(() => {
         setData();
         let myChart = $echarts.init(document.getElementById("oneChart"));
+
         myChart.setOption({
           tooltip: {
             trigger: "axis",
@@ -85,6 +86,9 @@ export default {
               },
             },
           ],
+        });
+        window.addEventListener("resize", function () {
+          myChart.resize();
         });
       });
     });

@@ -24,7 +24,9 @@ export default {
       // 调用请求
       getState().then(() => {
         let myChart = $echarts.init(document.getElementById("fourChart"));
-
+        window.addEventListener("resize", function () {
+          myChart.resize();
+        });
         myChart.setOption({
           tooltip: {
             trigger: "axis",

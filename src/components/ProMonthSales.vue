@@ -23,6 +23,9 @@ export default {
       // 调用请求
       getState().then(() => {
         let myChart = $echarts.init(document.getElementById("twoChart"));
+        window.addEventListener("resize", function () {
+          myChart.resize();
+        });
         myChart.setOption({
           tooltip: {
             trigger: "axis",
