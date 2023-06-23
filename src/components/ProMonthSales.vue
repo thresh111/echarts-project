@@ -9,4 +9,15 @@
 export default {};
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.chart {
+  height: 4.5rem;
+}
+h2 {
+  height: 0.6rem;
+  color: #fff;
+  line-height: 0.6rem;
+  font-size: 0.25rem;
+  text-align: center;
+}
+</style>

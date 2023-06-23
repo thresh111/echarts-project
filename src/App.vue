@@ -9,6 +9,8 @@ import { provide } from "vue";
 import * as echarts from "echarts";
 
 import axios from "axios";
+// 设置基准路径
+axios.defaults.baseURL = "http://localhost:8888";
 
 export default {
   setup() {

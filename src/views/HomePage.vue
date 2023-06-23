@@ -16,6 +16,7 @@
       <!-- 中容器 -->
       <div class="center-container">
         <h2>地图展示</h2>
+        <MapGaode />
       </div>
       <!-- 右容器 -->
       <div class="right-container">
@@ -35,7 +36,7 @@ import TotalSales from "@/components/TotalSales.vue";
 import ProMonthSales from "@/components/ProMonthSales.vue";
 import InventoryStatistics from "@/components/InventoryStatistics.vue";
 import ProCategory from "@/components/ProCategory.vue";
-
+import MapGaode from "./MapGaode/MapGaode.vue";
 import { inject } from "vue";
 
 export default {
@@ -45,6 +46,7 @@ export default {
     ProMonthSales,
     InventoryStatistics,
     ProCategory,
+    MapGaode,
   },
   setup() {
     // 测试使用echarts
