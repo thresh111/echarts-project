@@ -2,6 +2,9 @@
   <router-view />
 </template>
 <style lang="less">
+body {
+  background: url(../src/assets/bg.jpg) top center no-repeat;
+}
 * {
   margin: 0px;
   padding: 0px;
