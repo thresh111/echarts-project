@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>销售总量</h2>
     <div class="chart" id="oneChart"></div>
   </div>
 </template>
@@ -17,8 +18,8 @@ export default {
     function setData() {
       xAxisData = data.data.chartData.chartsData.map((item) => item.tittle);
       yAxisData = data.data.chartData.chartsData.map((item) => item.num);
-      console.log(xAxisData);
-      console.log(yAxisData);
+      // console.log(xAxisData);
+      // console.log(yAxisData);
     }
 
     async function getState() {
@@ -33,13 +34,6 @@ export default {
         setData();
         let myChart = $echarts.init(document.getElementById("oneChart"));
         myChart.setOption({
-          title: {
-            text: "销售总量",
-            textStyle: {
-              color: "#fff",
-              textAlign: "center",
-            },
-          },
           tooltip: {
             trigger: "axis",
             axisPointer: {
@@ -108,6 +102,14 @@ export default {
 
 <style lang="less" scoped>
 .chart {
-  height: 5rem;
+  height: 4.5rem;
+  margin: 0 auto;
+}
+h2 {
+  height: 0.6rem;
+  color: #fff;
+  line-height: 0.6rem;
+  font-size: 0.25rem;
+  text-align: center;
 }
 </style>

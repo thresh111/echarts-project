@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>产品分类</h2>
-    <div class="chart">图表的容器</div>
+    <div class="chart"></div>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ export default {};
 <style lang="less" scoped>
 .chart {
   height: 4.5rem;
+  margin: 0 auto;
 }
 h2 {
   height: 0.6rem;
